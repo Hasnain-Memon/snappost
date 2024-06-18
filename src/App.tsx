@@ -1,10 +1,16 @@
-
+import Header from "./components/Header/Header"
+import Footer from "./components/Footer/Footer"
+import { Outlet } from "react-router-dom"
 
 function App() {
 
   return (
     <>
-      <h1 className='bg-blue-500 text-white text-2xl rounded-md' >Snap Post</h1>
+      <Header />
+      <main>
+        <Outlet/>
+      </main>
+      < Footer/>
     </>
   )
 }
