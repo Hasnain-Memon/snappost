@@ -9,6 +9,8 @@ import { createBrowserRouter, RouterProvider  } from 'react-router-dom'
 import AboutPage from './pages/AboutPage.tsx'
 import PostsPage from './pages/PostsPage.tsx'
 import AddPostPage from './pages/AddPostPage.tsx'
+import LoginPage from './pages/LoginPage.tsx'
+import SignupPage from './pages/SignupPage.tsx'
 
 const router = createBrowserRouter([
   {
@@ -26,6 +28,14 @@ const router = createBrowserRouter([
   {
     path: '/add-post',
     element: <AddPostPage />
+  },
+  {
+    path: "/login",
+    element: <LoginPage />
+  },
+  {
+    path: "/signup",
+    element: <SignupPage />
   }
 ])
 
