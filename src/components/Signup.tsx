@@ -3,7 +3,7 @@ import { login } from "../store/authSlice"
 import { Link, useNavigate } from "react-router-dom"
 import { useAppDispatch } from "../store/hooks"
 import { useForm } from "react-hook-form"
-import { useState, useId } from "react"
+import { useState } from "react"
 import Logo from "./Logo"
 import Input from "./Input"
 import Button from "./Button"
@@ -15,7 +15,6 @@ export default function Signup() {
     const navigate = useNavigate();
     const dispatch = useAppDispatch();
     const {register, handleSubmit} = useForm();
-    const id = useId();
 
     const create = async(data: any) => {
         setError('');
@@ -40,12 +39,12 @@ export default function Signup() {
             <Logo className="text-black" />
         </div>
         <div>
-            <h2>Sign Up to Create Account</h2>
+            <h2 className="text-2xl font-bold">Sign Up to Create Account</h2>
         </div>
         <div>
             <p>
                 Already have an Account?
-                <Link to='login' className="text-purple-900 font-medium">Login</Link>
+                <Link to='/login' className="text-purple-900 font-medium">Login</Link>
             </p>
         </div>
         <div>
