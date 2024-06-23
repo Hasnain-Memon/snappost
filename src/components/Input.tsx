@@ -12,7 +12,7 @@ const Input = React.forwardRef(function Input({
     return (
         <div className='flex flex-col'>
             {label && <label htmlFor={id} className='inline-block font-medium' >{label}</label>}
-            <input type={type} id={id} {...props} className={`w-[20vw] focus:bg-gray-200 h-8 rounded-sm px-2 outline-none  ${className}`} ref={ref} />
+            <input type={type} id={id} {...props} className={`w-[20vw] bg-gray-100 focus:bg-white h-8 rounded-sm px-2 outline-none  ${className}`} ref={ref} />
         </div>
     )
 

@@ -14,7 +14,7 @@ class DatabaseService {
         this.bucket = new Storage(this.client);
     }
 
-    async createPost(title: string, content: string, featuredIamge: string, slug: string, status: string, userId: string) {
+    async createPost({title, content, featuredIamge, slug, status, userId}) {
         try {
             const post = await this.databases.createDocument(
                 conf.appwriteDatabaseId,
@@ -35,7 +35,7 @@ class DatabaseService {
         }
     }
 
-    async updatePost(slug: string, title: string, content: string, featuredIamge: string, status: string) {
+    async updatePost(slug: string, {title, content, featuredIamge, status}) {
         try {
             const post = await this.databases.updateDocument(
                 conf.appwriteDatabaseId,

@@ -1,7 +1,7 @@
 
 
 export default function Button({
-    type,
+    type = "button",
     children,
     className="",
     ...props
